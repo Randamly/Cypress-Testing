@@ -24,5 +24,24 @@ describe("Selectors", () => {
   //cy.contains("div.product-image-wrapper ul.nav-justified li","View Product")
   //cy.contains("p","Men Tshirt").parent("div").parent("div").next("div").children("ul").children("li").children("a")
   cy.contains("p","Men Tshirt").parentsUntil(".product-image-wrapper").parent().contains("a","View Product")
+ // cy.contains(".productinfo.text-center","Men Tshirt").trigger('mouseover','bottom')
+//   cy.contains(".productinfo.text-center", "Men Tshirt")
+//   .realHover()
+// .next("div")
+// .children(".overlay-content").children(".add-to-cart").click()
+
+  cy.contains(".productinfo.text-center", "Men Tshirt")
+    .realHover()
+    .next("div")
+    .children(".overlay-content")
+    .children(".add-to-cart").click();
+
+
+ // .should('be.visible')
+
+  
+
+  //cy.contains(".product-image-wrapper","Men Tshirt").trigger("mouseenter")
+  //cy.contains(".productinfo","Men Tshirt").next().find(".add-to-cart").click()
   });
 });
